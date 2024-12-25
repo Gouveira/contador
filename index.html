@@ -84,7 +84,8 @@
 
             // Mostrar la cuenta regresiva en el elemento con id="cuenta-regresiva"
             document.getElementById('cuenta-regresiva').innerHTML = "Error";
-            
+
+const vibra = document.getElementById('vibra');
             if (dias > 0) {
                 document.getElementById('cuenta-regresiva').innerHTML = dias + "d " + horas + "h " + minutos + "m " + segundos + "s ";
             }
@@ -98,15 +99,12 @@
                 document.getElementById('cuenta-regresiva').innerHTML = segundos + "s ";
             }
             if (dias <= 0 && horas <= 0 && minutos <= 0 && segundos <= 10) {
-                const vibra = document.getElementById('vibra');
                 vibra.style.animation = 'vibrar 0.4s infinite';
             }
 
             // Si la cuenta regresiva ha terminado
             if (distancia < 1000) {
-                setTimeout(function() {
-                    location.href = "https://gouveira.github.io/contador/rd/index.html";
-                }, 2000);
+                vibra.style.animation = 'vibrar 0s infinite';
                 clearInterval(intervalo);
                 document.getElementById('cuenta-regresiva').innerHTML = "¡Feliz Navidad!";
             }
