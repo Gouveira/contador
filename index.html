@@ -78,7 +78,7 @@
             const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
             // Mostrar la cuenta regresiva en el elemento con id="cuenta-regresiva"
-            document.getElementById('cuenta-regresiva').innerHTML = "Error";
+document.getElementById('linea').innerHTML = "Para el 25 faltan:"; document.getElementById('cuenta-regresiva').innerHTML = "Error";
 
 const vibra = document.getElementById('vibra');
             if (dias > 0) {
@@ -99,7 +99,7 @@ const vibra = document.getElementById('vibra');
 
             // Si la cuenta regresiva ha terminado
             if (distancia < 1000) {
-document.getElementById('cuenta-regresiva').innerHTML = "";                vibra.style.animation = 'vibrar 0s infinite';
+document.getElementById('linea').innerHTML = "";                vibra.style.animation = 'vibrar 0s infinite';
                 clearInterval(intervalo);
                 document.getElementById('cuenta-regresiva').innerHTML = "¡Feliz Navidad!";
             }
