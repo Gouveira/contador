@@ -59,7 +59,8 @@
 <body>
     <div class="contador" id="vibra">
         <h1 id="linea"></h1>
-        <p id="cuenta-regresiva"></p>
+        <p id="termi"></p>
+        <h2 id="cuenta-regresiva"></p>
     </div>
 
     <script>
@@ -101,7 +102,7 @@ const vibra = document.getElementById('vibra');
             if (distancia < 1000) {
 document.getElementById('linea').innerHTML = "";                vibra.style.animation = 'vibrar 0s infinite';
                 clearInterval(intervalo);
-                document.getElementById('cuenta-regresiva').innerHTML = "¡Feliz Navidad!";
+document.getElementById('cuenta-regresiva').innerHTML = ""; document.getElementById('termi').innerHTML = "¡Feliz Navidad!";
             }
         }, 1000);
     </script>
